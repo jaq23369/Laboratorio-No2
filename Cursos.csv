@@ -1,0 +1,5 @@
+idCurso,idSede,nombreCurso,horario,duracion,dias,cantidadEstudiantes
+12300,110,Programacion orientada a objetos,7:00 AM,25,"Lunes,Viernes",36
+12301,110,Algoritmos y estructuras de datos,9:00 AM,30,"Martes,Jueves",40
+12302,110,Base de datos,2:00 PM,40,"Lunes,Miercoles",20
+12303,110,Redes de computadoras,4:00 PM,50,"Jueves,Viernes",50
