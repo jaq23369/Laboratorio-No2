@@ -6,6 +6,7 @@ import java.util.List;
  * Carne: 23369
  * Carrera: Ingenieria en Sistemas
  * Fecha de inicio: 14/9/2023
+ * Fecha de finalizacion: 16/9/2023
  * Clase que representa un edificio de la universidad.
  */
 

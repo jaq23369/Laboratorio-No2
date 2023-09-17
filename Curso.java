@@ -3,78 +3,101 @@
  * Carne: 23369
  * Carrera: Ingenieria en Sistemas
  * Fecha de inicio: 14/9/2023
- * Clase que representa un curso de la universidad.
+ * Fecha de finalizacion: 16/9/2023
+ * Clase que Representa un curso ofrecido por la universidad.
+ * Cada curso tiene un identificador, nombre, horario, duración, días en los que se imparte,
+ * una cantidad determinada de estudiantes y una sede asociada.
  */
 
 public class Curso {
-    private String codigo; // Código del curso
-    private String nombre; // Nombre del curso
-    private int creditos; // Créditos del curso
+    private String id; /** Identificador único del curso. */
+    private String nombre; /** Nombre descriptivo del curso. */
+    private String horario; /** Horario en el que se imparte el curso. */
+    private String duracion; /** Duración total del curso en horas. */
+    private String dias; /** Días de la semana en los que se imparte el curso. */
+    private int cantidadEstudiantes; /** Cantidad máxima de estudiantes que pueden inscribirse al curso. */
+    private int sede; /** Identificador de la sede donde se imparte el curso. */
 
-    /**
-     * Constructor de la clase Curso.
+     /**
+     * Constructor que inicializa un nuevo objeto Curso con los datos proporcionados.
      *
-     * @param codigo Código del curso.
-     * @param nombre Nombre del curso.
-     * @param creditos Créditos del curso.
+     * @param id Identificador único del curso.
+     * @param nombre Nombre descriptivo del curso.
+     * @param horario Horario en el que se imparte el curso.
+     * @param duracion Duración total del curso.
+     * @param dias Días de la semana en los que se imparte el curso.
+     * @param cantidadEstudiantes Cantidad máxima de estudiantes que pueden inscribirse al curso.
+     * @param sede Identificador de la sede donde se imparte el curso.
      */
-    public Curso(String codigo, String nombre, int creditos) {
-        this.codigo = codigo;
+
+    public Curso(String id, String nombre, String horario, String duracion, String dias, int cantidadEstudiantes, int sede) {
+        this.id = id;
         this.nombre = nombre;
-        this.creditos = creditos;
+        this.horario = horario;
+        this.duracion = duracion;
+        this.dias = dias;
+        this.cantidadEstudiantes = cantidadEstudiantes;
+        this.sede = sede;
     }
 
-    /**
-     * Método que devuelve el código del curso.
-     *
-     * @return Código del curso.
-     */
-    public String getCodigo() {
-        return codigo;
+    // Getters y setters
+    public String getId() {
+        return id;
     }
 
-    /**
-     * Método que establece el código del curso.
-     *
-     * @param codigo Código del curso.
-     */
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
+
+    public void setId(String id) {
+        this.id = id;
     }
 
-    /**
-     * Método que devuelve el nombre del curso.
-     *
-     * @return Nombre del curso.
-     */
+
     public String getNombre() {
         return nombre;
     }
 
-    /**
-     * Método que establece el nombre del curso.
-     *
-     * @param nombre Nombre del curso.
-     */
+    
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    /**
-     * Método que devuelve los créditos del curso.
-     *
-     * @return Créditos del curso.
-     */
-    public int getCreditos() {
-        return creditos;
+    
+    public String getHorario() {
+        return horario;
     }
 
-    /**
-     * Método que establece los créditos del curso.
-     *
-     * @param creditos Créditos del curso.
-     */
-    public void setCreditos(int creditos) {
-        this.creditos = creditos;
+    public void setHorario(String horario){
+        this.horario = horario;
+    }
+
+    public String getDuracion(){
+        return duracion;
+    }
+
+    public void setDuracion(String duracion){
+        this.duracion = duracion;
+    }
+
+    public String getDias(){
+        return dias;
+    }
+
+    public void setDias(String dias){
+        this.dias = dias;
+    }
+
+    public int getCantidadEstudiantes(){
+        return cantidadEstudiantes;
+    }
+
+    public void setCantidadEstudiantes(int cantidadEstudiantes){
+        this.cantidadEstudiantes = cantidadEstudiantes;
+    }
+
+    public int getSede(){
+        return sede;
+    }
+
+    public void setSede(int sede){
+        this.sede = sede;
     }
 }

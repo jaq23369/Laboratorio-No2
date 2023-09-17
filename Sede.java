@@ -6,6 +6,7 @@ import java.util.List;
  * Carne: 23369
  * Carrera: Ingenieria en Sistemas
  * Fecha de inicio: 14/9/2023
+ * Fecha de finalizacion: 16/9/2023
  * Clase que representa una sede de la universidad
  */
 
@@ -22,43 +23,30 @@ public class Sede{
         this.idSede = idSede;
         this.edificios= new ArrayList<>();
     }
-
-    /**
-     * Método que devuelve el identificador de la sede.
-     *
-     * @return Identificador de la sede.
-     */
+    // Getters y Setters
     public int getIdSede(){
         return idSede;
     }
-
-    /**
-     * Método que establece el identificador de la sede.
-     *
-     * @param idSede Identificador de la sede.
-     */
 
     public void setIdSede(int idSede){
         this.idSede = idSede;
     }
 
-    /**
-     * Método que devuelve la lista de edificios de la sede.
-     *
-     * @return Lista de edificios de la sede.
-     */
-
     public List<Edificio> getEdificios(){
         return edificios;
     }
 
-    /**
-     * Método que agrega un edificio a la lista de edificios de la sede.
-     *
-     * @param edificio Edificio a agregar.
-     */
-
     public void agregarEdificio(Edificio edificio){
         edificios.add(edificio);
+    }
+
+     // Método agregado para buscar un edificio por nombre en la sede.
+    public Edificio getEdificioByName(String nombre) {
+        for (Edificio edificio : edificios) {
+            if (edificio.getNombre().equals(nombre)) {
+                return edificio;
+            }
+        }
+        return null;  // Si no se encuentra el edificio, regresa null.
     }
 }
